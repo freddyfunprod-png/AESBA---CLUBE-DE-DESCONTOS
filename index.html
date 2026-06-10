@@ -264,6 +264,31 @@
                     note: 'Fique atento às comunicações da AsBEA-SC para mais informações sobre este benefício.'
                 }
             },
+            {
+                id: '7',
+                name: 'MIME',
+                category: 'Mobilidade & Automotivo',
+                discount: 'Descontos em Combustível',
+                description: 'Rede de postos MIME com descontos exclusivos em combustíveis e lubrificantes para associados AsBEA-SC. Economize a cada abastecimento.',
+                logo: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMjAgODAiPjx0ZXh0IHg9IjUwJSIgeT0iNTIlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSI2MiIgbGV0dGVyLXNwYWNpbmc9Ii0zIj48dHNwYW4gZmlsbD0iIzFhMWExYSI+bWk8L3RzcGFuPjx0c3BhbiBmaWxsPSIjRTIyMzFBIj5tZTwvdHNwYW4+PC90ZXh0PjxjaXJjbGUgY3g9IjE1MCIgY3k9IjIwIiByPSI2IiBmaWxsPSIjRTIyMzFBIi8+PC9zdmc+',
+                location: 'Santa Catarina',
+                link: 'https://www.mime.com.br/',
+                logoSize: 'large',
+                modalContent: {
+                    title: 'MIME — Descontos em Combustível',
+                    benefits: [
+                        { icon: 'fuel', label: 'GNV', desc: 'R$ 0,12 de desconto por m³' },
+                        { icon: 'fuel', label: 'Etanol', desc: 'R$ 0,12 de desconto por litro' },
+                        { icon: 'fuel', label: 'Gasolina comum', desc: 'R$ 0,12 de desconto por litro' },
+                        { icon: 'fuel', label: 'Gasolina aditivada', desc: 'R$ 0,20 de desconto por litro' },
+                        { icon: 'percent', label: 'Lubrificantes automotivos', desc: '15% de desconto' },
+                    ],
+                    contacts: [
+                        { label: 'Site', value: 'mime.com.br', href: 'https://www.mime.com.br/' },
+                    ],
+                    note: 'Os valores podem sofrer alteração sem aviso prévio. Apresente seu comprovante de associado AsBEA-SC no posto para aplicar o desconto.'
+                }
+            },
         ];
 
         const Navbar = ({ onCategoryClick, onContactClick }) => {
@@ -589,9 +614,6 @@
 
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
-    </script>
-</body>
-</html>);
     </script>
 </body>
 </html>
