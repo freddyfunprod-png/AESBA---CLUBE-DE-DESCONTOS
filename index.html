@@ -14,14 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
+    <script src="https://unpkg.com/lucide@1.17.0/dist/umd/lucide.min.js"></script>
+
     <!-- React & ReactDOM CDN -->
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    
+    <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+
     <!-- Babel para JSX en el navegador -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.29.7/babel.min.js"></script>
     
     <style>
         html { scroll-behavior: smooth; }
@@ -378,7 +378,7 @@
                             <div className="space-y-3">
                                 <span className="text-[10px] font-black uppercase tracking-[0.5em] text-black block">Contato</span>
                                 {m.contacts.map((c, i) => (
-                                    <a key={i} href={c.href} target="_blank" className="flex items-center gap-4 group">
+                                    <a key={i} href={c.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                                         <span className="text-[9px] font-black uppercase tracking-widest text-gray-300 w-20">{c.label}</span>
                                         <span className="font-black text-black group-hover:text-[#FF6B00] transition-colors">{c.value}</span>
                                     </a>
@@ -408,7 +408,7 @@
                                     </a>
                                 </div>
                             )}
-                            <a href={partner.link} target="_blank" className="flex items-center justify-center gap-3 bg-[#FF6B00] text-white px-8 py-5 text-xs font-black uppercase tracking-[0.4em] hover:scale-[1.02] transition-all w-full shadow-lg shadow-[#FF6B00]/20">
+                            <a href={partner.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-[#FF6B00] text-white px-8 py-5 text-xs font-black uppercase tracking-[0.4em] hover:scale-[1.02] transition-all w-full shadow-lg shadow-[#FF6B00]/20">
                                 <i data-lucide="arrow-up-right" className="w-4 h-4"></i>
                                 {partner.id === '3' ? 'Contato via WhatsApp' : 'Acessar Site'}
                             </a>
@@ -482,7 +482,7 @@
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-32">
                                 {PARTNERS.map((partner, index) => (
-                                    <a key={partner.id} href={partner.link} target="_blank" className={`group flex flex-col transition-all duration-700 ${index % 2 !== 0 ? 'md:translate-y-32' : ''}`}>
+                                    <a key={partner.id} href={partner.link} target="_blank" rel="noopener noreferrer" className={`group flex flex-col transition-all duration-700 ${index % 2 !== 0 ? 'md:translate-y-32' : ''}`}>
                                         <div className="relative aspect-[16/11] bg-white overflow-hidden border border-gray-100 flex items-center justify-center p-0 transition-all duration-1000 group-hover:shadow-2xl group-hover:border-[#FF6B00]/20">
                                             <img src={partner.logo} className={`object-contain transition-all duration-1000 group-hover:scale-110 mix-blend-multiply w-full h-full ${partner.logoSize === 'large' ? 'max-w-full max-h-full' : 'max-w-[90%] max-h-[90%]'}`} style={partner.logoScale ? {transform: `scale(${partner.logoScale})`} : {}} alt={partner.name} />
                                             <div className="absolute top-8 right-8">
@@ -547,7 +547,7 @@
                                             <h2 className="text-5xl md:text-7xl font-black text-black tracking-tighter uppercase leading-[0.9]">Convido vocês a acompanharem <br /> nossas ações pelos <br /> nossos canais:</h2>
                                         </div>
                                         <div className="flex flex-col sm:flex-row gap-10 pt-10">
-                                            <a href="https://asbeasc.org.br" target="_blank" className="flex items-center gap-6 group">
+                                            <a href="https://asbeasc.org.br" target="_blank" rel="noopener noreferrer" className="flex items-center gap-6 group">
                                                 <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center border border-gray-200 group-hover:border-[#FF6B00] transition-all duration-500"><Icon name="globe" className="w-6 h-6 text-black group-hover:text-[#FF6B00]" /></div>
                                                 <div className="flex flex-col"><span className="text-[9px] font-black uppercase tracking-widest text-gray-400">Website</span><span className="text-2xl font-black text-black tracking-tighter group-hover:text-[#FF6B00] transition-colors">asbeasc.org.br</span></div>
                                             </a>
@@ -560,12 +560,12 @@
                                     <div className="lg:col-span-5 bg-white p-12 md:p-20 border border-gray-100 shadow-2xl relative">
                                         <h3 className="text-2xl font-black text-black tracking-tighter uppercase mb-12">Convido vocês a seguirem</h3>
                                         <div className="space-y-16">
-                                            <a href="https://instagram.com/asbeasc" target="_blank" className="flex items-center gap-8 group">
+                                            <a href="https://instagram.com/asbeasc" target="_blank" rel="noopener noreferrer" className="flex items-center gap-8 group">
                                                 <Icon name="instagram" className="w-12 h-12 text-[#FF6B00]" />
                                                 <div className="flex flex-col"><span className="text-5xl font-black text-black tracking-tighter group-hover:translate-x-2 transition-transform">@asbeasc</span><span className="text-[10px] font-bold text-gray-300 uppercase tracking-[0.4em] mt-1">Instagram</span></div>
                                             </a>
                                             <div className="w-full h-px bg-gray-50" />
-                                            <a href="https://linkedin.com/company/asbeasc" target="_blank" className="flex items-center gap-8 group">
+                                            <a href="https://linkedin.com/company/asbeasc" target="_blank" rel="noopener noreferrer" className="flex items-center gap-8 group">
                                                 <Icon name="linkedin" className="w-12 h-12 text-[#FF6B00]" />
                                                 <div className="flex flex-col overflow-hidden"><span className="text-2xl md:text-3xl font-black text-black tracking-tighter group-hover:translate-x-2 transition-transform truncate">company/asbeasc</span><span className="text-[10px] font-bold text-gray-300 uppercase tracking-[0.4em] mt-1">LinkedIn Business</span></div>
                                             </a>
